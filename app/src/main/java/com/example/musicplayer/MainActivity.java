@@ -1,6 +1,5 @@
 package com.example.musicplayer;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -10,6 +9,8 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
     ImageView songImage;
     Button playButton;
+    Button skipPreviousButton;
+    Button skipNextButton;
     boolean isPlaying = false;
 
 
@@ -19,13 +20,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         songImage = findViewById(R.id.imageView);
         playButton = findViewById(R.id.button);
-        playButton.setBackgroundResource(R.drawable.button_press);
+        skipPreviousButton = findViewById(R.id.button2);
+        skipNextButton = findViewById(R.id.button3);
         playButton.setOnClickListener(view -> {
             if (isPlaying) {
-                playButton.setBackgroundResource(R.drawable.button_press);
+                playButton.setBackgroundResource(R.drawable.button_play);
                 isPlaying = false;
             } else  {
-                playButton.setBackgroundResource(R.drawable.baseline_pause_24);
+                playButton.setBackgroundResource(R.drawable.button_pause);
                 isPlaying = true;
             }
         });
