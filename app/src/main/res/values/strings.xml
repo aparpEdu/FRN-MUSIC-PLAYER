@@ -6,4 +6,5 @@
     <string name="skip_next_song">Skip next Song</string>
     <string name="play_or_pause_song">Play or pause Song</string>
     <string name="skip_previous_song">Skip previous song</string>
+    <string name="_0_00_0_00">0:00/0:00</string>
 </resources>
